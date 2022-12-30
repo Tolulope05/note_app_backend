@@ -1,18 +1,8 @@
 const fs = require("node:fs")
-const https = require('node:https');
+const ext = require('./utils.js')
 
-fs.writeFileSync("hello.txt","Tolu: 'How are you?'")
-fs.appendFileSync("hello.txt","Seyi: 'I am fine too and you?'")
+// fs.writeFileSync("hello.txt","Tolu: 'How are you?'")
+// fs.appendFileSync("hello.txt","Seyi: 'I am fine too and you?'")
 
+console.log(ext.nam);
 
-https.get('https://encrypted.google.com/', (res) => {
-  console.log('statusCode:', res.statusCode);
-  console.log('headers:', res.headers);
-
-  res.on('data', (d) => {
-    process.stdout.write(d);
-  });
-
-}).on('error', (e) => {
-  console.error(e);
-});

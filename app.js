@@ -1,6 +1,4 @@
-// const fs = require("node:fs");
+const validator = require("validator")
 const note = require("./utils.js");
 
-
-// fs.writeFileSync("hello.txt","Tolu: 'How are you?'")
-// fs.appendFileSync("hello.txt","Seyi: 'I am fine too and you?'")
+console.log(validator.equals("Tolu","tolu"))

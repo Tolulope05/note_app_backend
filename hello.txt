@@ -1,1 +1,0 @@
-Tolu: 'How are you?'Seyi: 'I am fine too and you?'

@@ -1,5 +1,5 @@
 const yargs = require("yargs");
-const getNotes = require("./note.js");
+const getNsotes = require("./intro.js");
 
 // console.log(process.argv)
 // console.log(yargs.argv);

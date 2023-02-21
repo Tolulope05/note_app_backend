@@ -7,4 +7,4 @@ const note = function () {
   return "Your Note is doing fine...";
 };
 
-module.exports = note;
+module.exports = intro;

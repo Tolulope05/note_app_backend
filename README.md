@@ -16,6 +16,6 @@ npm install
 
 Then do the following:
 
-    ```bash
-    npm run dev
-    ```
+```bash
+npm run dev
+```

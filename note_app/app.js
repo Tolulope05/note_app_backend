@@ -29,7 +29,6 @@ yargs.command({
     title: { describe: "Note Title", demandOption: true, type: "string" },
   },
   handler: function (argv) {
-    console.log("Removing note", argv.title);
     notes.removeNote(argv.title);
   },
 });

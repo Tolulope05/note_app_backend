@@ -23,17 +23,12 @@ const addNote = function (title, body) {
 
 const removeNote = function (title) {
   const notes = loadNotes();
-  const newNotes = [];
 
-  // notes.forEach((note) => {
-  //   if (note.title == title) {
-  //     // do nothing
+  const notesToKeep = notes.filter(function (note) {
+    return note.title !== title;
+  });
 
-  //   } else {
-  //     newNotes.push(note);
-  //   }
-  //   saveNote(newNotes);
-  // });
+  saveNote(notesToKeep);
 };
 
 const saveNote = function (n) {

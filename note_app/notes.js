@@ -21,6 +21,21 @@ const addNote = function (title, body) {
   console.log(notes);
 };
 
+const removeNote = function (title) {
+  const notes = loadNotes();
+  const newNotes = [];
+
+  // notes.forEach((note) => {
+  //   if (note.title == title) {
+  //     // do nothing
+
+  //   } else {
+  //     newNotes.push(note);
+  //   }
+  //   saveNote(newNotes);
+  // });
+};
+
 const saveNote = function (n) {
   const dataJSON = JSON.stringify(n);
   fs.writeFileSync("notes.json", dataJSON);
@@ -37,4 +52,8 @@ const loadNotes = function () {
   }
 };
 
-module.exports = { getNotes: getNotes, addNote: addNote };
+module.exports = {
+  getNotes: getNotes,
+  addNote: addNote,
+  removeNote: removeNote,
+};

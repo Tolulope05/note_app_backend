@@ -12,10 +12,7 @@ const tasks = {
   ],
 
   getTaskTodo() {
-    const uncompletedTasks = this.tasks.filter(
-      (task) => task.completed == false
-    );
-    return uncompletedTasks;
+    return this.tasks.filter((task) => task.completed == false);
   },
 };
 console.log(tasks.getTaskTodo());

@@ -24,9 +24,11 @@ const addNote = function (title, body) {
 const removeNote = (title) => {
   const notes = loadNotes();
 
-  const notesToKeep = notes.filter(function (note) {
-    return note.title !== title;
-  });
+  // const notesToKeep = notes.filter(function (note) {
+  //   return note.title !== title;
+  // });
+  // using arrow function
+  const notesToKeep = notes.filter((n) => n.title !== title);
 
   // function to know whether note was removed
   if (notes.length > notesToKeep.length) {

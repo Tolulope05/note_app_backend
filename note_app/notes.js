@@ -28,7 +28,13 @@ const removeNote = function (title) {
     return note.title !== title;
   });
 
-  saveNote(notesToKeep);
+  // function to know whether note was removed
+  if (notes.length > notesToKeep.length) {
+    console.log("Note Removed Successfully!");
+    saveNote(notesToKeep);
+  } else {
+    console.log("No note found");
+  }
 };
 
 const saveNote = function (n) {

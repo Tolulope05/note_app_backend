@@ -29,6 +29,7 @@ const removeNote = (title) => {
   // });
   // using arrow function
   const notesToKeep = notes.filter((n) => n.title !== title);
+  //NB:Arrow functions do not bind to this binding in an objects
 
   // function to know whether note was removed
   if (notes.length > notesToKeep.length) {

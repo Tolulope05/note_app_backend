@@ -36,12 +36,12 @@ const removeNote = (title) => {
   }
 };
 
-const saveNote = function (n) {
+const saveNote = (n) => {
   const dataJSON = JSON.stringify(n);
   fs.writeFileSync("notes.json", dataJSON);
 };
 
-const loadNotes = function () {
+const loadNotes = () => {
   try {
     const dataBuffer = fs.readFileSync("notes.json");
     const dataJSON = dataBuffer.toString();

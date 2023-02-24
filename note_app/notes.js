@@ -52,8 +52,19 @@ const loadNotes = () => {
   }
 };
 
+const readNotes = (title) => {
+  const notes = loadNotes();
+  const selectedNote = notes.filter((n) => n.title === title);
+  console.log(
+    selectedNote.forEach((n) => {
+      return n.body;
+    })
+  );
+};
+
 module.exports = {
   getNotes: getNotes,
   addNote: addNote,
   removeNote: removeNote,
+  readNotes: readNotes,
 };
